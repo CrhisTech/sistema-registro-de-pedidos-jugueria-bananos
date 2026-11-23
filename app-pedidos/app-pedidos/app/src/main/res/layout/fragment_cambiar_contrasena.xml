@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- M06 · Perfil — "security · Cambiar contraseña" (Figma, nodo 6:2134) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bananos_fondo"
+    android:orientation="vertical"
+    tools:context=".CambiarContrasenaFragment">
+
+    <!-- Cabecera: chevron + título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnVolver"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/registro_volver"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/bananos_texto" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cambiar_titulo"
+            android:textColor="@color/bananos_texto"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etActual"
+                android:text="@string/cambiar_actual" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilActual"
+                style="@style/Bananos.Campo"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etActual"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="password"
+                    android:hint="@string/registro_contrasena_ejemplo"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="72"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etNueva"
+                android:text="@string/cambiar_nueva" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNueva"
+                style="@style/Bananos.Campo"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNueva"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="newPassword"
+                    android:hint="@string/registro_contrasena_ejemplo"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="72"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etConfirmar"
+                android:text="@string/cambiar_confirmar" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilConfirmar"
+                style="@style/Bananos.Campo"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etConfirmar"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="newPassword"
+                    android:hint="@string/registro_contrasena_ejemplo"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="72"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCambiar"
+                style="@style/Bananos.BotonPrincipal"
+                android:layout_marginTop="16dp"
+                android:text="@string/cambiar_boton" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

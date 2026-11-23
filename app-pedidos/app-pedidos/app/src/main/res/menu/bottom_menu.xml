@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/cartaFragment"
+        android:icon="@drawable/ic_nav_carta"
+        android:title="Carta" />
+    <item
+        android:id="@+id/pedidosFragment"
+        android:icon="@drawable/ic_nav_pedidos"
+        android:title="Pedidos" />
+    <item
+        android:id="@+id/carritoFragment"
+        android:icon="@drawable/ic_nav_carrito"
+        android:title="Carrito" />
+    <item
+        android:id="@+id/perfilFragment"
+        android:icon="@drawable/ic_nav_perfil"
+        android:title="Perfil" />
+</menu>

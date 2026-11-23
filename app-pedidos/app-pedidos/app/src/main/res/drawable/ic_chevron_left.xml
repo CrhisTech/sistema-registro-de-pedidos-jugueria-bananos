@@ -1,0 +1,11 @@
+<!-- Exportado de Figma: ChevronLeftIcon.svg (el color lo pone el tint de cada vista) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF000000"
+        android:fillType="evenOdd"
+        android:pathData="M14.147 5.01624C14.4693 5.31843 14.4856 5.82468 14.1834 6.14702L8.69639 11.9999L14.1834 17.8527C14.4856 18.1751 14.4693 18.6813 14.147 18.9835C13.8246 19.2856 13.3184 19.2693 13.0162 18.9471L7.01618 12.547C6.72768 12.2393 6.72768 11.7604 7.01618 11.4527L13.0162 5.05272C13.3184 4.73038 13.8246 4.71406 14.147 5.01624Z" />
+</vector>

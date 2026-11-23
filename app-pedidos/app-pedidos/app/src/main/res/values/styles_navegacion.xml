@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Píldora verde claro detrás del ícono activo (diseño Figma) -->
+    <style name="Bananos.BottomNav.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/bananos_verde_claro</item>
+    </style>
+
+    <style name="Bananos.BottomNav.Texto" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">app-pedidos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- M01 · Catálogo -->
+    <string name="catalogo_titulo">Carta</string>
+    <string name="catalogo_logo">Logo de Bananos</string>
+    <string name="catalogo_buscar">Buscar en la carta</string>
+    <string name="catalogo_todos">Todos</string>
+    <string name="catalogo_agregar">Agregar al carrito</string>
+    <string name="catalogo_imagen_ilustrativa">Imagen ilustrativa</string>
+    <string name="catalogo_sin_resultados">No encontramos productos para tu búsqueda.</string>
+    <string name="catalogo_error">No pudimos cargar la carta. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="catalogo_reintentar">Reintentar</string>
+    <string name="catalogo_agregado">%1$s (%2$s) agregado al carrito</string>
+
+    <!-- M03 · Registro (register · Crear cuenta) -->
+    <string name="registro_titulo">Crear cuenta</string>
+    <string name="registro_volver">Volver</string>
+    <string name="registro_nombre">Nombre completo *</string>
+    <string name="registro_nombre_ejemplo">Andrea Torres</string>
+    <string name="registro_celular">Celular *</string>
+    <string name="registro_celular_ejemplo">999000001</string>
+    <string name="registro_direccion">Dirección exacta *</string>
+    <string name="registro_direccion_ejemplo">Av. de ejemplo 123</string>
+    <string name="registro_correo">Correo electrónico *</string>
+    <string name="registro_correo_ejemplo">andrea@example.test</string>
+    <string name="registro_contrasena">Contraseña *</string>
+    <string name="registro_contrasena_ejemplo">••••••••</string>
+    <string name="registro_confirmar">Confirmar contraseña *</string>
+    <string name="registro_boton">Crear cuenta</string>
+    <string name="registro_ya_tengo_cuenta">Ya tengo una cuenta</string>
+    <string name="registro_exito">¡Bienvenido, %1$s! Tu cuenta fue creada.</string>
+    <string name="registro_error_nombre">El nombre completo es obligatorio</string>
+    <string name="registro_error_celular">El celular debe tener 9 dígitos</string>
+    <string name="registro_error_direccion">La dirección exacta es obligatoria</string>
+    <string name="registro_error_correo_obligatorio">El correo electrónico es obligatorio</string>
+    <string name="registro_error_correo_invalido">El correo electrónico no es válido</string>
+    <string name="registro_error_contrasena">La contraseña debe tener entre 8 y 72 caracteres</string>
+    <string name="registro_error_confirmar_obligatorio">Confirma tu contraseña</string>
+    <string name="registro_error_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="registro_error_conexion">No pudimos conectar con el servidor. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="registro_error_general">Ocurrió un error al crear tu cuenta. Inténtalo nuevamente.</string>
+
+    <!-- M03 · Iniciar sesión (auth · Iniciar sesión) -->
+    <string name="login_titulo">Iniciar sesión</string>
+    <string name="login_boton">Iniciar sesión</string>
+    <string name="login_olvide_contrasena">Olvidé mi contraseña</string>
+    <string name="login_crear_cuenta">Crear una cuenta</string>
+    <string name="login_error_contrasena">La contraseña es obligatoria</string>
+    <string name="login_error_credenciales">Correo y/o contraseña incorrectos</string>
+    <string name="login_error_general">No pudimos iniciar sesión. Inténtalo nuevamente.</string>
+
+    <!-- M06 · Perfil -->
+    <string name="perfil_titulo">Mi perfil</string>
+    <string name="perfil_editar_datos">Editar datos</string>
+    <string name="perfil_cambiar_contrasena">Cambiar contraseña</string>
+    <string name="perfil_cerrar_sesion">Cerrar sesión</string>
+    <string name="perfil_error">No pudimos cargar tus datos. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="editar_titulo">Editar datos</string>
+    <string name="editar_correo">Correo</string>
+    <string name="editar_boton">Guardar cambios</string>
+    <string name="editar_exito">Tus datos se guardaron correctamente</string>
+    <string name="editar_error">No pudimos guardar tus datos. Inténtalo nuevamente.</string>
+    <string name="cambiar_titulo">Cambiar contraseña</string>
+    <string name="cambiar_actual">Contraseña actual</string>
+    <string name="cambiar_nueva">Nueva contraseña</string>
+    <string name="cambiar_boton">Cambiar Contraseña</string>
+    <string name="cambiar_error_actual">La contraseña actual es obligatoria</string>
+    <string name="cambiar_error_nueva">La nueva contraseña debe tener entre 8 y 72 caracteres</string>
+    <string name="cambiar_error">No pudimos cambiar tu contraseña. Inténtalo nuevamente.</string>
+    <string name="title_activity_recuperar_contrasena">Leanback RecuperarContrasenaActivity</string>
+    <string name="browse_title">Videos by Your Company</string>
+    <string name="related_movies">Related Videos</string>
+    <string name="grid_view">Grid View</string>
+    <string name="error_fragment">Error Fragment</string>
+    <string name="personal_settings">Personal Settings</string>
+    <string name="watch_trailer_1">Watch trailer</string>
+    <string name="watch_trailer_2">FREE</string>
+    <string name="rent_1">Rent By Day</string>
+    <string name="rent_2">From $1.99</string>
+    <string name="buy_1">Buy and Own</string>
+    <string name="buy_2">AT $9.99</string>
+    <string name="movie">Movie</string>
+
+    <!-- Error messages -->
+    <string name="error_fragment_message">An error occurred</string>
+    <string name="dismiss_error">Dismiss</string>
+
+
+    <!-- Recuperación de contraseña -->
+    <string name="recuperar_titulo">Recuperar contraseña</string>
+    <string name="recuperar_volver">Volver</string>
+    <string name="recuperar_descripcion">Ingresa tu correo electrónico registrado y te enviaremos una contraseña temporal para recuperar el acceso a tu cuenta.</string>
+    <string name="recuperar_boton">Enviar contraseña temporal</string>
+    <string name="recuperar_ir_login">Volver al inicio de sesión</string>
+
+    <!-- Validaciones y mensajes de recuperación -->
+    <string name="recuperar_correo_vacio">Ingresa tu correo electrónico</string>
+    <string name="recuperar_correo_invalido">Ingresa un correo electrónico válido</string>
+    <string name="recuperar_exito">Revisa tu correo electrónico. Te hemos enviado una contraseña temporal.</string>
+    <string name="recuperar_error">No se pudo procesar la solicitud</string>
+    <string name="recuperar_error_conexion">No se pudo conectar con el servidor</string>
+
+    <string name="cambiar_confirmar">Confirmar contraseña</string>
+    <string name="cambiar_error_confirmar">Confirma tu nueva contraseña</string>
+    <string name="cambiar_error_coincidencia">Las contraseñas no coinciden</string>
+    <string name="cambiar_error_repetida">La nueva contraseña debe ser diferente a la actual</string>
+    <string name="cambiar_error_sesion">No hay una sesión activa</string>
+
+</resources>

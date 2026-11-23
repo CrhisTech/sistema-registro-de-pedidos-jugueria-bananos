@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- M03 · Autenticación — "auth · Iniciar sesión" (Figma, nodo 6:501) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bananos_fondo"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <!-- Cabecera: solo título (es la primera pantalla, sin botón volver) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:text="@string/login_titulo"
+        android:textColor="@color/bananos_texto"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etCorreo"
+                android:text="@string/registro_correo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCorreo"
+                style="@style/Bananos.Campo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCorreo"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="emailAddress"
+                    android:hint="@string/registro_correo_ejemplo"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="150"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etContrasena"
+                android:text="@string/registro_contrasena" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilContrasena"
+                style="@style/Bananos.Campo"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etContrasena"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="password"
+                    android:hint="@string/registro_contrasena_ejemplo"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="72"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIniciarSesion"
+                style="@style/Bananos.BotonPrincipal"
+                android:layout_marginTop="16dp"
+                android:text="@string/login_boton" />
+
+            <!-- Fila de menú: "Olvidé mi contraseña" (pantalla de recuperación aún no implementada) -->
+
+            <!-- Fila de menú: "Olvidé mi contraseña" -> RecuperarContrasenaActivity -->
+            <LinearLayout
+                android:id="@+id/filaOlvideContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/login_olvide_contrasena"
+                    android:textColor="@color/bananos_texto"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/bananos_texto" />
+
+            </LinearLayout>
+
+            <!-- Fila de menú: "Crear una cuenta" -> RegistroActivity -->
+            <LinearLayout
+                android:id="@+id/filaCrearCuenta"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/login_crear_cuenta"
+                    android:textColor="@color/bananos_texto"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/bananos_texto" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
