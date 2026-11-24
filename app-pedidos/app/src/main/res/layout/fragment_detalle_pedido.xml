@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- M05 · Pedidos — "order · Detalle de pedido" en local y delivery (Figma, nodos 6:1480 y 50:550) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bananos_fondo"
+    android:orientation="vertical"
+    tools:context=".DetallePedidoFragment">
+
+    <!-- Cabecera: chevron + título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnVolver"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/registro_volver"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/bananos_verde" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/detalle_titulo"
+            android:textColor="@color/bananos_texto"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/svContenido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvCodigo"
+                    style="@style/Bananos.CodigoPedido"
+                    tools:text="BAN-DEMO" />
+
+                <!-- Resumen: modalidad, sucursal y pago -->
+                <LinearLayout
+                    style="@style/Bananos.Resumen"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/tvModalidad"
+                        style="@style/Bananos.Resumen.Titulo"
+                        tools:text="DELIVERY" />
+
+                    <TextView
+                        android:id="@+id/tvSucursal"
+                        style="@style/Bananos.Resumen.Texto"
+                        tools:text="Bananos Callao (Chosica)" />
+
+                    <TextView
+                        android:id="@+id/tvMetodoPago"
+                        style="@style/Bananos.Resumen.Nota"
+                        tools:text="Efectivo" />
+                </LinearLayout>
+
+                <!-- Tu pedido: una tarjeta por producto -->
+                <TextView
+                    style="@style/Bananos.TituloSeccion"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/detalle_tu_pedido" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProductos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_linea_pedido" />
+
+                <!-- Solo delivery: dirección de entrega -->
+                <LinearLayout
+                    android:id="@+id/layoutDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <TextView
+                        style="@style/Bananos.TituloSeccion"
+                        android:text="@string/detalle_direccion_entrega" />
+
+                    <TextView
+                        android:id="@+id/tvDireccion"
+                        style="@style/Bananos.Resumen"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/bananos_texto"
+                        android:textSize="14sp"
+                        tools:text="Av. Nicolas de Piérola Mz 34 Lt 21" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCompartir"
+                    style="@style/Bananos.BotonPrincipal"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/detalle_compartir" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/progreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/bananos_verde" />
+
+        <!-- Error al cargar -->
+        <LinearLayout
+            android:id="@+id/layoutError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="48dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bananos_texto_secundario"
+                android:textSize="14sp"
+                tools:text="No pudimos conectar con el servidor." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReintentar"
+                style="@style/Bananos.BotonPrincipal"
+                android:layout_marginTop="12dp"
+                android:text="@string/pedidos_reintentar" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

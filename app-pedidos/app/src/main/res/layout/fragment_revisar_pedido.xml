@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- M04 · Registrar pedido — "checkout-review · Revisa tu solicitud" (Figma, nodo 6:1109) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bananos_fondo"
+    android:orientation="vertical"
+    tools:context=".RevisarPedidoFragment">
+
+    <!-- Cabecera: chevron + título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnVolver"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/registro_volver"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/bananos_verde" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/pedido_titulo"
+            android:textColor="@color/bananos_texto"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                style="@style/Bananos.TituloSeccion"
+                android:text="@string/revisar_titulo" />
+
+            <!-- Resumen: modalidad, sucursal y pago -->
+            <LinearLayout
+                style="@style/Bananos.Resumen"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tvModalidad"
+                    style="@style/Bananos.Resumen.Titulo"
+                    tools:text="RECOJO" />
+
+                <TextView
+                    android:id="@+id/tvSucursal"
+                    style="@style/Bananos.Resumen.Texto"
+                    tools:text="Bananos Callao (Chosica)" />
+
+                <TextView
+                    android:id="@+id/tvMetodoPago"
+                    style="@style/Bananos.Resumen.Nota"
+                    tools:text="Efectivo" />
+            </LinearLayout>
+
+            <!-- Productos: una tarjeta por producto -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProductos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_linea_pedido" />
+
+            <!-- Solo delivery: dirección de entrega (mismo bloque que el Detalle de pedido) -->
+            <LinearLayout
+                android:id="@+id/layoutDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    style="@style/Bananos.TituloSeccion"
+                    android:text="@string/detalle_direccion_entrega" />
+
+                <TextView
+                    android:id="@+id/tvDireccion"
+                    style="@style/Bananos.Resumen"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/bananos_texto"
+                    android:textSize="14sp"
+                    tools:text="Av. Nicolas de Piérola Mz 34 Lt 21" />
+            </LinearLayout>
+
+            <!-- Total -->
+            <TextView
+                android:id="@+id/tvTotal"
+                style="@style/Bananos.Resumen"
+                android:minHeight="80dp"
+                android:textColor="@color/bananos_texto"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Total de productos · S/ 7,00" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Acción fija -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegistrar"
+        style="@style/Bananos.BotonPrincipal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="12dp"
+        android:text="@string/revisar_boton" />
+</LinearLayout>

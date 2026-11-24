@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Bananos.Campo.Etiqueta">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">@color/bananos_texto</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Bananos.Campo" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxBackgroundColor">@color/bananos_superficie</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/bananos_verde</item>
+    </style>
+
+    <style name="Bananos.Campo.Texto">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:textColor">@color/bananos_texto</item>
+        <item name="android:textColorHint">@color/bananos_texto_secundario</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Bananos.BotonPrincipal" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/bananos_verde</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <!-- Desplegable (sucursal): mismo aspecto que Bananos.Campo -->
+    <style name="Bananos.Campo.Desplegable" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxBackgroundColor">@color/bananos_superficie</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/bananos_verde</item>
+        <item name="endIconTint">@color/bananos_texto</item>
+    </style>
+
+    <!-- Opción de selección única (Figma: "Opción"): tarjeta blanca, texto a la izquierda y radio verde a la derecha -->
+    <style name="Bananos.Opcion" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:background">@drawable/bg_opcion</item>
+        <item name="android:button">@null</item>
+        <item name="buttonCompat">@null</item>
+        <item name="android:drawableEnd">@drawable/ic_radio_opcion</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textColor">@color/bananos_texto</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Título de sección ("¿Cómo recibirás tu pedido?") -->
+    <style name="Bananos.TituloSeccion" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/bananos_texto</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Mensaje de error bajo un grupo de opciones (oculto por defecto) -->
+    <style name="Bananos.TextoError" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:textColor">?attr/colorError</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!-- Tarjeta blanca de resumen (Figma: "Resumen" y "Línea de carrito") -->
+    <style name="Bananos.Resumen" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/bg_resumen</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Textos dentro de la tarjeta: título en negrita, texto normal y nota pequeña -->
+    <style name="Bananos.Resumen.Titulo" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/bananos_texto</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Bananos.Resumen.Texto" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">@color/bananos_texto</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Bananos.Resumen.Nota" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">@color/bananos_texto_secundario</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Código del pedido en verde ("BAN-0001") -->
+    <style name="Bananos.CodigoPedido" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/bananos_verde</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

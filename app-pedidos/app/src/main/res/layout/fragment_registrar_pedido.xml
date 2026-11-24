@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- M04 · Registrar pedido — "checkout · Registrar pedido" (Figma, nodo 6:844) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bananos_fondo"
+    android:orientation="vertical"
+    tools:context=".RegistrarPedidoFragment">
+
+    <!-- Cabecera: chevron + título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnVolver"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/registro_volver"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/bananos_verde" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/pedido_titulo"
+            android:textColor="@color/bananos_texto"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="24dp">
+
+            <!-- Modalidad -->
+            <TextView
+                style="@style/Bananos.TituloSeccion"
+                android:text="@string/pedido_como_recibiras" />
+
+            <RadioGroup
+                android:id="@+id/rgModalidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbRecojo"
+                    style="@style/Bananos.Opcion"
+                    android:checked="true"
+                    android:text="@string/modalidad_recojo" />
+
+                <RadioButton
+                    android:id="@+id/rbDelivery"
+                    style="@style/Bananos.Opcion"
+                    android:text="@string/modalidad_delivery" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvErrorModalidad"
+                style="@style/Bananos.TextoError"
+                android:text="@string/pedido_error_modalidad" />
+
+            <!-- Sucursal -->
+            <TextView
+                style="@style/Bananos.TituloSeccion"
+                android:layout_marginTop="16dp"
+                android:text="@string/pedido_sucursal" />
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/actvSucursal"
+                android:text="@string/pedido_selecciona_local" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilSucursal"
+                style="@style/Bananos.Campo.Desplegable">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/actvSucursal"
+                    style="@style/Bananos.Campo.Texto"
+                    android:hint="@string/pedido_sucursal_hint"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Método de pago -->
+            <TextView
+                style="@style/Bananos.TituloSeccion"
+                android:layout_marginTop="16dp"
+                android:text="@string/pedido_como_pagaras" />
+
+            <RadioGroup
+                android:id="@+id/rgMetodoPago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbEfectivo"
+                    style="@style/Bananos.Opcion"
+                    android:checked="true"
+                    android:text="@string/pago_efectivo" />
+
+                <RadioButton
+                    android:id="@+id/rbTarjeta"
+                    style="@style/Bananos.Opcion"
+                    android:text="@string/pago_tarjeta" />
+
+                <RadioButton
+                    android:id="@+id/rbBilletera"
+                    style="@style/Bananos.Opcion"
+                    android:text="@string/pago_billetera" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvErrorPago"
+                style="@style/Bananos.TextoError"
+                android:text="@string/pedido_error_pago" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Acción fija -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinuar"
+        style="@style/Bananos.BotonPrincipal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="12dp"
+        android:text="@string/carrito_continuar" />
+</LinearLayout>

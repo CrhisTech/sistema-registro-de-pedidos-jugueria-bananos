@@ -1,0 +1,11 @@
+<!-- Exportado de Figma: CheckIcon.svg (el color lo pone el tint de cada vista) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FF000000"
+        android:fillType="evenOdd"
+        android:pathData="M18.3471 5.96294C18.8093 6.26518 18.9391 6.88492 18.6368 7.34716L11.8368 17.7472C11.6766 17.9923 11.4169 18.1547 11.1265 18.1918C10.836 18.229 10.5439 18.1368 10.3272 17.9398L5.92718 13.9399C5.51853 13.5683 5.48842 12.9359 5.85992 12.5272C6.23142 12.1186 6.86387 12.0885 7.27253 12.46L10.8047 15.6711L16.9629 6.25267C17.2652 5.79043 17.8848 5.66072 18.3471 5.96294Z" />
+</vector>

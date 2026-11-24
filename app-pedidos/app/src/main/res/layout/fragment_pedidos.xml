@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- M05 · Pedidos — "orders · Mis pedidos" (Figma, nodo 6:1432) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bananos_fondo"
+    android:orientation="vertical"
+    tools:context=".PedidosFragment">
+
+    <!-- Cabecera: solo título (es una pestaña de la barra inferior, como Mi perfil) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:text="@string/pedidos_titulo"
+        android:textColor="@color/bananos_texto"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="8dp"
+            tools:listitem="@layout/item_pedidos" />
+
+        <ProgressBar
+            android:id="@+id/progreso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/bananos_verde"
+            android:visibility="gone" />
+
+        <!-- Sin pedidos o error -->
+        <LinearLayout
+            android:id="@+id/layoutEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="48dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_nav_pedidos"
+                app:tint="@color/bananos_verde" />
+
+            <TextView
+                android:id="@+id/tvEstadoTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/bananos_texto"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Aún no tienes pedidos" />
+
+            <TextView
+                android:id="@+id/tvEstadoDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/bananos_texto_secundario"
+                android:textSize="14sp"
+                tools:text="Tus pedidos registrados aparecerán aquí." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEstado"
+                style="@style/Bananos.BotonPrincipal"
+                android:layout_marginTop="12dp"
+                tools:text="Explorar la carta" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

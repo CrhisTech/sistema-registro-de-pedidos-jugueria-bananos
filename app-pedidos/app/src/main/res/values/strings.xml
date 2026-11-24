@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">app-pedidos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- M01 · Catálogo -->
+    <string name="catalogo_titulo">Carta</string>
+    <string name="catalogo_logo">Logo de Bananos</string>
+    <string name="catalogo_buscar">Buscar en la carta</string>
+    <string name="catalogo_todos">Todos</string>
+    <string name="catalogo_agregar">Agregar al carrito</string>
+    <string name="catalogo_imagen_ilustrativa">Imagen ilustrativa</string>
+    <string name="catalogo_sin_resultados">No encontramos productos para tu búsqueda.</string>
+    <string name="catalogo_error">No pudimos cargar la carta. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="catalogo_reintentar">Reintentar</string>
+    <string name="catalogo_agregado">%1$s (%2$s) agregado al carrito</string>
+
+    <!-- M03 · Registro (register · Crear cuenta) -->
+    <string name="registro_titulo">Crear cuenta</string>
+    <string name="registro_volver">Volver</string>
+    <string name="registro_nombre">Nombre completo *</string>
+    <string name="registro_nombre_ejemplo">Andrea Torres</string>
+    <string name="registro_celular">Celular *</string>
+    <string name="registro_celular_ejemplo">999000001</string>
+    <string name="registro_direccion">Dirección exacta *</string>
+    <string name="registro_direccion_ejemplo">Av. de ejemplo 123</string>
+    <string name="registro_correo">Correo electrónico *</string>
+    <string name="registro_correo_ejemplo">andrea@example.test</string>
+    <string name="registro_contrasena">Contraseña *</string>
+    <string name="registro_contrasena_ejemplo">••••••••</string>
+    <string name="registro_confirmar">Confirmar contraseña *</string>
+    <string name="registro_boton">Crear cuenta</string>
+    <string name="registro_ya_tengo_cuenta">Ya tengo una cuenta</string>
+    <string name="registro_exito">¡Bienvenido, %1$s! Tu cuenta fue creada.</string>
+    <string name="registro_error_nombre">El nombre completo es obligatorio</string>
+    <string name="registro_error_celular">El celular debe tener 9 dígitos</string>
+    <string name="registro_error_direccion">La dirección exacta es obligatoria</string>
+    <string name="registro_error_correo_obligatorio">El correo electrónico es obligatorio</string>
+    <string name="registro_error_correo_invalido">El correo electrónico no es válido</string>
+    <string name="registro_error_contrasena">La contraseña debe tener entre 8 y 72 caracteres</string>
+    <string name="registro_error_confirmar_obligatorio">Confirma tu contraseña</string>
+    <string name="registro_error_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="registro_error_conexion">No pudimos conectar con el servidor. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="registro_error_general">Ocurrió un error al crear tu cuenta. Inténtalo nuevamente.</string>
+
+    <!-- M03 · Iniciar sesión (auth · Iniciar sesión) -->
+    <string name="login_titulo">Iniciar sesión</string>
+    <string name="login_boton">Iniciar sesión</string>
+    <string name="login_olvide_contrasena">Olvidé mi contraseña</string>
+    <string name="login_crear_cuenta">Crear una cuenta</string>
+    <string name="login_error_contrasena">La contraseña es obligatoria</string>
+    <string name="login_error_credenciales">Correo y/o contraseña incorrectos</string>
+    <string name="login_error_general">No pudimos iniciar sesión. Inténtalo nuevamente.</string>
+
+    <!-- M06 · Perfil -->
+    <string name="perfil_titulo">Mi perfil</string>
+    <string name="perfil_editar_datos">Editar datos</string>
+    <string name="perfil_cambiar_contrasena">Cambiar contraseña</string>
+    <string name="perfil_cerrar_sesion">Cerrar sesión</string>
+    <string name="perfil_error">No pudimos cargar tus datos. Revisa tu conexión e inténtalo de nuevo.</string>
+    <string name="editar_titulo">Editar datos</string>
+    <string name="editar_correo">Correo</string>
+    <string name="editar_boton">Guardar cambios</string>
+    <string name="editar_exito">Tus datos se guardaron correctamente</string>
+    <string name="editar_error">No pudimos guardar tus datos. Inténtalo nuevamente.</string>
+    <string name="cambiar_titulo">Cambiar contraseña</string>
+    <string name="cambiar_actual">Contraseña actual</string>
+    <string name="cambiar_nueva">Nueva contraseña</string>
+    <string name="cambiar_boton">Cambiar Contraseña</string>
+    <string name="cambiar_error_actual">La contraseña actual es obligatoria</string>
+    <string name="cambiar_error_nueva">La nueva contraseña debe tener entre 8 y 72 caracteres</string>
+    <string name="cambiar_error">No pudimos cambiar tu contraseña. Inténtalo nuevamente.</string>
+
+    <!-- Recuperar contraseña -->
+    <string name="recuperar_titulo">Recuperar contraseña</string>
+    <string name="recuperar_correo">Correo electrónico</string>
+    <string name="recuperar_boton">Solicitar recuperación</string>
+    <string name="recuperar_exito">Te enviamos una contraseña temporal a tu correo. Úsala para iniciar sesión.</string>
+    <string name="recuperar_error_general">No pudimos enviar el correo. Inténtalo nuevamente.</string>
+
+    <!-- Carrito -->
+    <string name="carrito_titulo">Tu carrito</string>
+    <string name="carrito_descripcion">Revisa tus productos antes de continuar.</string>
+    <string name="carrito_detalle">%1$s · %2$s por unidad</string>
+    <string name="carrito_menos">−</string>
+    <string name="carrito_mas">+</string>
+    <string name="carrito_disminuir">Disminuir cantidad</string>
+    <string name="carrito_aumentar">Aumentar cantidad</string>
+    <string name="carrito_agregar_mas">Agregar más productos</string>
+    <string name="carrito_total">Total · %1$s</string>
+    <string name="carrito_continuar">Continuar</string>
+    <string name="carrito_vacio_titulo">Tu carrito está vacío</string>
+    <string name="carrito_vacio_descripcion">Encuentra algo rico en nuestra carta.</string>
+    <string name="carrito_explorar">Explorar la carta</string>
+
+    <!-- Registrar pedido -->
+    <string name="pedido_titulo">Registrar pedido</string>
+    <string name="pedido_como_recibiras">¿Cómo recibirás tu pedido?</string>
+    <string name="modalidad_recojo">Recojo en local</string>
+    <string name="modalidad_delivery">Delivery</string>
+    <string name="modalidad_recojo_corta">Recojo</string>
+    <string name="pedido_sucursal">Sucursal de atención</string>
+    <string name="pedido_sucursal_hint">Elige una sucursal</string>
+    <string name="pedido_selecciona_local">Selecciona un local</string>
+    <string name="pedido_como_pagaras">¿Cómo pagarás al recibir?</string>
+    <string name="pago_efectivo">Efectivo</string>
+    <string name="pago_tarjeta">Tarjeta (POS)</string>
+    <string name="pago_billetera">Billetera digital (Yape o Plin)</string>
+    <string name="pedido_error_modalidad">Elige cómo recibirás tu pedido</string>
+    <string name="pedido_error_sucursal">Elige la sucursal de atención</string>
+    <string name="pedido_error_pago">Elige cómo pagarás al recibir</string>
+    <string name="pedido_error_sucursales">No pudimos cargar las sucursales. Inténtalo nuevamente.</string>
+
+    <!-- Revisa tu solicitud -->
+    <string name="revisar_titulo">Revisa tu solicitud</string>
+    <string name="revisar_boton">Registrar solicitud</string>
+    <string name="revisar_total">Total de productos · %1$s</string>
+    <string name="revisar_error">No pudimos registrar tu pedido. Inténtalo nuevamente.</string>
+    <string name="linea_producto">%1$d × %2$s</string>
+
+    <!-- Solicitud registrada -->
+    <string name="registrado_titulo">Solicitud registrada</string>
+    <string name="registrado_ver_pedido">Ver mi pedido</string>
+    <string name="registrado_volver_carta">Volver a la carta</string>
+
+    <!-- Mis pedidos -->
+    <string name="pedidos_titulo">Mis pedidos</string>
+    <string name="pedidos_fecha_modalidad">%1$s · %2$s</string>
+    <string name="pedidos_cantidad_total">%1$s · %2$s</string>
+    <plurals name="pedidos_cantidad">
+        <item quantity="one">%1$d producto</item>
+        <item quantity="other">%1$d productos</item>
+    </plurals>
+    <string name="pedidos_vacio_titulo">Aún no tienes pedidos</string>
+    <string name="pedidos_vacio_descripcion">Tus pedidos registrados aparecerán aquí.</string>
+    <string name="pedidos_error_titulo">No pudimos cargar tus pedidos</string>
+    <string name="pedidos_reintentar">Reintentar</string>
+
+    <!-- Detalle de pedido -->
+    <string name="detalle_titulo">Detalle de pedido</string>
+    <string name="detalle_tu_pedido">Tu pedido</string>
+    <string name="detalle_direccion_entrega">Dirección de entrega</string>
+    <string name="detalle_compartir">Compartir pedido</string>
+    <string name="detalle_error">No pudimos cargar el pedido. Inténtalo nuevamente.</string>
+
+    <!-- Texto de "Compartir pedido" (WhatsApp a Atención al Cliente) -->
+    <string name="compartir_encabezado">Pedido Juguería Bananos</string>
+    <string name="compartir_codigo">Código: %1$s</string>
+    <string name="compartir_fecha">Fecha y hora: %1$s</string>
+    <string name="compartir_cliente">Cliente: %1$s (%2$s)</string>
+    <string name="compartir_modalidad">Modalidad: %1$s</string>
+    <string name="compartir_sucursal">Sucursal: %1$s</string>
+    <string name="compartir_direccion">Dirección: %1$s</string>
+    <string name="compartir_pago">Pago al recibir: %1$s</string>
+    <string name="compartir_productos">Productos:</string>
+    <string name="compartir_linea">• %1$d × %2$s (%3$s) · %4$s</string>
+</resources>

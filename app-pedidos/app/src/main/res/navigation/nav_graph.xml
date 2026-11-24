@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/cartaFragment">
+
+    <fragment
+        android:id="@+id/carritoFragment"
+        android:name="pe.idat.app_pedidos.CarritoFragment"
+        android:label="fragment_carrito"
+        tools:layout="@layout/fragment_carrito">
+        <action
+            android:id="@+id/action_carritoFragment_to_registrarPedidoFragment"
+            app:destination="@id/registrarPedidoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrarPedidoFragment"
+        android:name="pe.idat.app_pedidos.RegistrarPedidoFragment"
+        android:label="fragment_registrar_pedido"
+        tools:layout="@layout/fragment_registrar_pedido">
+        <action
+            android:id="@+id/action_registrarPedidoFragment_to_revisarPedidoFragment"
+            app:destination="@id/revisarPedidoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/revisarPedidoFragment"
+        android:name="pe.idat.app_pedidos.RevisarPedidoFragment"
+        android:label="fragment_revisar_pedido"
+        tools:layout="@layout/fragment_revisar_pedido">
+        <!-- Al registrar, se quitan Registrar pedido y Revisar de la pila: "atrás" ya no vuelve a ellos -->
+        <action
+            android:id="@+id/action_revisarPedidoFragment_to_pedidoRegistradoFragment"
+            app:destination="@id/pedidoRegistradoFragment"
+            app:popUpTo="@id/carritoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedidoRegistradoFragment"
+        android:name="pe.idat.app_pedidos.PedidoRegistradoFragment"
+        android:label="fragment_pedido_registrado"
+        tools:layout="@layout/fragment_pedido_registrado">
+        <!-- "Ver mi pedido": quita la confirmación de la pila; "atrás" desde el detalle vuelve al carrito -->
+        <action
+            android:id="@+id/action_pedidoRegistradoFragment_to_detallePedidoFragment"
+            app:destination="@id/detallePedidoFragment"
+            app:popUpTo="@id/pedidoRegistradoFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartaFragment"
+        android:name="pe.idat.app_pedidos.CartaFragment"
+        android:label="fragment_carta"
+        tools:layout="@layout/fragment_carta" />
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="pe.idat.app_pedidos.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil">
+        <action
+            android:id="@+id/action_perfilFragment_to_editarDatosFragment"
+            app:destination="@id/editarDatosFragment" />
+        <action
+            android:id="@+id/action_perfilFragment_to_cambiarContrasenaFragment"
+            app:destination="@id/cambiarContrasenaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarDatosFragment"
+        android:name="pe.idat.app_pedidos.EditarDatosFragment"
+        android:label="fragment_editar_datos"
+        tools:layout="@layout/fragment_editar_datos" />
+    <fragment
+        android:id="@+id/cambiarContrasenaFragment"
+        android:name="pe.idat.app_pedidos.CambiarContrasenaFragment"
+        android:label="fragment_cambiar_contrasena"
+        tools:layout="@layout/fragment_cambiar_contrasena" />
+    <fragment
+        android:id="@+id/pedidosFragment"
+        android:name="pe.idat.app_pedidos.PedidosFragment"
+        android:label="fragment_pedidos"
+        tools:layout="@layout/fragment_pedidos">
+        <action
+            android:id="@+id/action_pedidosFragment_to_detallePedidoFragment"
+            app:destination="@id/detallePedidoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detallePedidoFragment"
+        android:name="pe.idat.app_pedidos.DetallePedidoFragment"
+        android:label="fragment_detalle_pedido"
+        tools:layout="@layout/fragment_detalle_pedido" />
+</navigation>

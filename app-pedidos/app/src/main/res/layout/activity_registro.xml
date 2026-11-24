@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- M03 · Autenticación — "register · Crear cuenta" (Figma, nodo 6:557) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bananos_fondo"
+    android:orientation="vertical"
+    tools:context=".RegistroActivity">
+
+    <!-- Cabecera: chevron + título -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/btnVolver"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/registro_volver"
+            android:src="@drawable/ic_chevron_left"
+            app:tint="@color/bananos_texto" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/registro_titulo"
+            android:textColor="@color/bananos_texto"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etNombre"
+                android:text="@string/registro_nombre" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombre"
+                style="@style/Bananos.Campo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNombre"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="name"
+                    android:hint="@string/registro_nombre_ejemplo"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLength="150"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etCelular"
+                android:text="@string/registro_celular" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCelular"
+                style="@style/Bananos.Campo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCelular"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="phoneNational"
+                    android:digits="0123456789"
+                    android:hint="@string/registro_celular_ejemplo"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="9"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etDireccion"
+                android:text="@string/registro_direccion" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDireccion"
+                style="@style/Bananos.Campo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDireccion"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="postalAddress"
+                    android:hint="@string/registro_direccion_ejemplo"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPostalAddress|textCapSentences"
+                    android:maxLength="250"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etCorreo"
+                android:text="@string/registro_correo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilCorreo"
+                style="@style/Bananos.Campo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCorreo"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="emailAddress"
+                    android:hint="@string/registro_correo_ejemplo"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="150"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etContrasena"
+                android:text="@string/registro_contrasena" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilContrasena"
+                style="@style/Bananos.Campo"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etContrasena"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="newPassword"
+                    android:hint="@string/registro_contrasena_ejemplo"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="72"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Bananos.Campo.Etiqueta"
+                android:labelFor="@id/etConfirmar"
+                android:text="@string/registro_confirmar" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilConfirmar"
+                style="@style/Bananos.Campo"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etConfirmar"
+                    style="@style/Bananos.Campo.Texto"
+                    android:autofillHints="newPassword"
+                    android:hint="@string/registro_contrasena_ejemplo"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="72"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistrar"
+                style="@style/Bananos.BotonPrincipal"
+                android:layout_marginTop="16dp"
+                android:text="@string/registro_boton" />
+
+            <!-- Fila de menú: "Ya tengo una cuenta" -->
+            <LinearLayout
+                android:id="@+id/filaIrLogin"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/registro_ya_tengo_cuenta"
+                    android:textColor="@color/bananos_texto"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_chevron_right"
+                    app:tint="@color/bananos_texto" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

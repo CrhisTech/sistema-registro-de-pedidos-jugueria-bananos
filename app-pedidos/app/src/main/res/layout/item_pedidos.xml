@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- M05 · Pedidos — tarjeta "Pedido" de Mis pedidos (Figma, nodo 6:1474) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Bananos.Resumen"
+    android:layout_marginBottom="16dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/tvCodigo"
+        style="@style/Bananos.Resumen.Titulo"
+        tools:text="BAN-DEMO" />
+
+    <TextView
+        android:id="@+id/tvFechaModalidad"
+        style="@style/Bananos.Resumen.Texto"
+        tools:text="25 oct. 2026 · 12:00 · Recojo" />
+
+    <TextView
+        android:id="@+id/tvSucursal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/bananos_texto"
+        android:textSize="14sp"
+        tools:text="Bananos Callao (Chosica)" />
+
+    <TextView
+        android:id="@+id/tvCantidadTotal"
+        style="@style/Bananos.Resumen.Nota"
+        tools:text="1 producto · S/ 7,00" />
+</LinearLayout>

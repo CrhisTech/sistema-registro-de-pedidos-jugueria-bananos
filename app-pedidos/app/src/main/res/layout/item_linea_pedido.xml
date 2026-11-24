@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "Línea de carrito" (Figma): "1 × Papaya" / presentación / precio, en una tarjeta blanca -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Bananos.Resumen"
+    android:layout_marginBottom="16dp">
+
+    <TextView
+        android:id="@+id/tvProducto"
+        style="@style/Bananos.Resumen.Titulo"
+        tools:text="1 × Papaya" />
+
+    <TextView
+        android:id="@+id/tvOpcion"
+        style="@style/Bananos.Resumen.Texto"
+        tools:text="Personal" />
+
+    <TextView
+        android:id="@+id/tvPrecio"
+        style="@style/Bananos.Resumen.Nota"
+        tools:text="S/ 7,00" />
+</LinearLayout>

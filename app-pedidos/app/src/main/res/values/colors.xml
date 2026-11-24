@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta Bananos (diseño Figma) -->
+    <color name="bananos_fondo">#FFFBF2</color>
+    <color name="bananos_superficie">#FFFFFF</color>
+    <color name="bananos_amarillo">#F5C518</color>
+    <color name="bananos_verde">#23783B</color>
+    <color name="bananos_verde_claro">#DDEFDF</color>
+    <color name="bananos_texto">#1C1B1F</color>
+    <color name="bananos_texto_secundario">#5F6368</color>
+    <color name="bananos_borde">#D6D6D6</color>
+    <color name="bananos_placeholder">#E3EFE3</color>
+    <color name="bananos_opcion_elegida">#EEF6EE</color>
+</resources>

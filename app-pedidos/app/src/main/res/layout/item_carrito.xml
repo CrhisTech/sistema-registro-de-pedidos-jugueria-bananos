@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- M02 · Carrito — "Producto en carrito" (Figma, nodo 5:774) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="16dp">
+
+    <FrameLayout
+        android:layout_width="76dp"
+        android:layout_height="76dp">
+
+        <ImageView
+            android:id="@+id/ivProducto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_imagen_placeholder"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvImagenIlustrativa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/bg_etiqueta_ilustrativa"
+            android:paddingHorizontal="2dp"
+            android:text="@string/catalogo_imagen_ilustrativa"
+            android:textColor="@color/bananos_texto_secundario"
+            android:textSize="8sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bananos_texto"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Papaya" />
+
+        <TextView
+            android:id="@+id/tvDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/bananos_texto_secundario"
+            android:textSize="12sp"
+            tools:text="Personal · S/ 7,00 por unidad" />
+
+        <!-- Cantidad: − 1 + -->
+        <LinearLayout
+            android:layout_width="128dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_cantidad"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnMenos"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/carrito_disminuir"
+                android:gravity="center"
+                android:text="@string/carrito_menos"
+                android:textColor="@color/bananos_verde"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCantidad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/bananos_texto"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="1" />
+
+            <TextView
+                android:id="@+id/btnMas"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="@string/carrito_aumentar"
+                android:gravity="center"
+                android:text="@string/carrito_mas"
+                android:textColor="@color/bananos_verde"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvImporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/bananos_verde"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="S/ 7,00" />
+    </LinearLayout>
+</LinearLayout>
